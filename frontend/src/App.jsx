@@ -9,12 +9,14 @@ import JobSeekerDashboard from "./pages/JobSeekerDashboard.jsx";
 import Landing from "./pages/Landing.jsx";
 import Login from "./pages/Login.jsx";
 import Moderation from "./pages/Moderation.jsx";
+import Roadmap from "./pages/Roadmap.jsx";
 import Register from "./pages/Register.jsx";
 
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/jobs", label: "Jobs" },
   { to: "/seeker", label: "Job Seeker" },
+  { to: "/roadmap", label: "Roadmap" },
   { to: "/employer", label: "Admin" },
   { to: "/login", label: "Login" }
 ];
@@ -40,6 +42,7 @@ export default function App() {
           <Route path="/jobs" element={<JobList />} />
           <Route path="/jobs/:id" element={<JobDetail />} />
           <Route path="/seeker" element={<JobSeekerDashboard />} />
+          <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/employer" element={<EmployerDashboard />} />
           <Route path="/employer/company" element={<CompanyProfile />} />
           <Route path="/employer/applications" element={<Applications />} />

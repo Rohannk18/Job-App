@@ -1,13 +1,12 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 const APPLICATIONS_KEY = "jea_applications";
 
-const roadmap = [
+const roadmapPreview = [
   "Data structures refresher",
   "System design basics",
-  "Behavioral interview practice",
-  "Mock interview session",
-  "Portfolio cleanup and project review"
+  "Behavioral interview practice"
 ];
 
 export default function JobSeekerDashboard() {
@@ -167,12 +166,15 @@ export default function JobSeekerDashboard() {
           </div>
           <div className="card">
             <h3>Learning Roadmap</h3>
-            <p>AI-guided resources for interview readiness:</p>
+            <p>AI-guided resources for interview readiness.</p>
             <ul>
-              {roadmap.map((item) => (
+              {roadmapPreview.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="actions">
+              <Link className="btn secondary" to="/roadmap">Generate full roadmap</Link>
+            </div>
           </div>
         </div>
       </div>
